@@ -1,8 +1,6 @@
 #!/bin/bash
-BAT_STATE=$(upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep -E "state" | awk '{print $2}')
 
-if [ "$BAT_STATE" == "discharging" ]; then
-    powerprofilesctl set balanced
-else
-    powerprofilesctl set performance
-fi
+# Use LLM to figure out how to use this script with a UDEV rule such that it happens whenever you plug, unplug the charger
+STATE=$(cat /sys/class/power_supply/ACAD/online)
+
+[[ "$STATE" -eq 1 ]] && powerprofilesctl set performance || powerprofilesctl set power-saver
