@@ -1,93 +1,165 @@
-# Arch Linux Hyprland Plug‑and‑Play Configuration
+# Hyprland Dotfiles — Minimalist & Performance‑First 🚀
 
-This document lists required environment tweaks, setup commands, and installed packages used for a fully functional Hyprland Wayland setup.
+A clean, fast, and keyboard‑driven Linux setup built around **Hyprland** on **Arch Linux**. These dotfiles are designed for users who want a minimal system with a cohesive aesthetic and excellent performance.
+
+The configuration focuses on:
+
+* Speed
+* Minimal resource usage
+* Consistent Catppuccin Mocha / OLED theme
+* Wayland‑native applications
+* Keyboard‑centric workflow
 
 ---
 
-## Environment Configuration
+# ✨ Features
 
-### Firefox (Wayland Support)
+## ⚡ Performance‑Focused
 
-Enable native Wayland support:
+Animations and blur are disabled to keep the system extremely responsive and lightweight.
+
+## 🎨 Unified Theme
+
+A consistent **Catppuccin Mocha / OLED palette** is applied across the system:
+
+* Foot terminal
+* Rofi launcher
+* Mako notifications
+* Zed editor
+
+## 🖥 Terminal
+
+**Foot** terminal configured with **JetBrainsMono Nerd Font** for a clean developer‑friendly experience.
+
+## 📝 Code Editor
+
+**Zed** editor with:
+
+* Custom OLED theme
+* Built‑in Code Runner
+* Ready for C++, Python, and JavaScript
+
+## 🔋 Smart Power Management
+
+Automatic power‑profile switching depending on whether the device is **charging or on battery**.
+
+---
+
+# 📦 Required Packages
+
+Install required packages using **pacman** and **yay** (for AUR packages).
 
 ```bash
-MOZ_ENABLE_WAYLAND=1
+ani-cli-git
+base
+base-devel
+bash-completion
+bluetui
+bluez
+bluez-utils
+brightnessctl
+cliphist
+dhcpcd
+efibootmgr
+fastfetch
+foot
+git
+grim
+gst-plugin-pipewire
+helium-browser-bin
+hyprland
+impala
+imv
+intel-media-driver
+intel-ucode
+iwd
+libpulse
+linux
+linux-firmware
+mako
+mpv
+nano
+ncdu
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+power-profiles-daemon
+python-gobject
+rofi
+slurp
+sof-firmware
+sudo
+swaybg
+thunar
+ttf-jetbrains-mono-nerd
+wireplumber
+wpa_supplicant
+xdg-utils
+yay-bin
+zed
+zram-generator
 ```
 
 ---
 
-## Wallpaper Script Requirement
+# 🚀 Getting Started
 
-Create a symlink so wallpaper scripts can reference the current wallpaper consistently:
+## 1️⃣ Wallpaper Setup
+
+Create a symlink so scripts can always find your wallpaper.
 
 ```bash
-ln -sf ~/Pictures/Wallpapers/your_wallpaper.jpg ~/.config/sway/current_wallpaper
+ln -sf ~path/to/wallpaper_folder/random_wallpaper.jpg/png ~/.config/hypr/current_wallpaper
 ```
 
 ---
 
-## Installed Packages
+## 2️⃣ Wayland Environment Variables
 
-```
-ani-cli-git r781.4dbb799-1
-base 3-3
-base-devel 1-2
-bash-completion 2.17.0-3
-bluetui 0.8.1-1
-bluez 5.86-4
-bluez-utils 5.86-4
-brightnessctl 0.5.1-3
-cliphist 1:0.7.0-2
-dhcpcd 10.3.0-1
-efibootmgr 18-3
-fastfetch 2.59.0-1
-firefox 148.0-1
-foot 1.26.0-1
-git 2.53.0-1
-grim 1.5.0-2
-gst-plugin-pipewire 1:1.4.10-2
-gvfs 1.58.2-1
-htop 3.4.1-1
-hyprland 0.54.1-1
-impala 0.7.4-1
-imv 5.0.1-1
-intel-media-driver 25.4.6-1
-intel-ucode 20260227-1
-iwd 3.11-2
-libpulse 17.0+r98+gb096704c0-1
-linux 6.18.13.arch1-1
-linux-firmware 20260221-1
-mako 1.10.0-1
-mpv 1:0.41.0-3
-nano 8.7.1-1
-pipewire 1:1.4.10-2
-pipewire-alsa 1:1.4.10-2
-pipewire-jack 1:1.4.10-2
-pipewire-pulse 1:1.4.10-2
-polkit-gnome 0.105-12
-power-profiles-daemon 0.30-1
-python-gobject 3.54.5-2
-rofi 2.0.0-1
-slurp 1.5.0-1
-sof-firmware 2025.12.2-1
-sudo 1.9.17.p2-2
-swaybg 1.2.2-1
-thunar 4.20.7-1
-ttf-jetbrains-mono-nerd 3.4.0-2
-waybar 0.15.0-2
-wireplumber 0.5.13-1
-wpa_supplicant 2:2.11-5
-xdg-utils 1.2.1-2
-yay-bin 12.5.7-1
-zed 0.225.13-1
-zram-generator 1.2.1-1
+Add these to your environment for better Wayland compatibility.
+
+```bash
+ELECTRON_OZONE_PLATFORM_HINT=wayland
+GDK_BACKEND=wayland
 ```
 
 ---
 
-## Notes
+# ⌨️ Keybindings
 
-* Designed for a minimal Wayland-first workflow.
-* PipeWire is used for audio handling.
-* Hyprland acts as the primary compositor.
-* GTK theming uses Catppuccin Mocha.
+Essential shortcuts for navigating the system.
+
+| Action                   | Keybinding        |
+| ------------------------ | ----------------- |
+| Open Terminal            | SUPER + RETURN    |
+| Open Browser (Helium)    | SUPER + B         |
+| Open App Launcher        | SUPER + SPACE     |
+| Open Code Editor         | SUPER + Z         |
+| Close Window             | SUPER + W         |
+| Clipboard History        | SUPER + V         |
+| Screenshot (Select Area) | SUPER + SHIFT + S |
+| Power Menu               | SUPER + ESCAPE    |
+
+---
+
+# 🧠 Workflow Philosophy
+
+This setup follows a few simple principles:
+
+* Everything should be **keyboard accessible**.
+* The system should remain **minimal and distraction‑free**.
+* Applications should be **Wayland‑native whenever possible**.
+* Visual consistency matters.
+
+---
+
+# 🤝 Contributing
+
+Feel free to open issues or submit pull requests if you have improvements or ideas.
+
+---
+
+# 📜 License
+
+MIT License
