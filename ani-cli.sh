@@ -200,7 +200,7 @@ main() {
   local anime_list=$(fetch_anime_search_results "${search_query}")
   [[ -z "${anime_list}" ]] && die "No results found."
 
-  local selected_anime_data=$(printf "%s\n" "${anime_list}" | awk '{printf "%3d\t%s\n", NR, $0}' | select_menu_item "Select anime: ")
+  local selected_anime_data=$(printf "%s\n" "${anime_list}" | awk '{printf "%1d\t%s\n", NR, $0}' | select_menu_item "Select anime: ")
   [[ -z "${selected_anime_data}" ]] && exit 1
 
   local raw_title=$(printf "%s\n" "${selected_anime_data}" | awk -F'\t' '{print $2}')
