@@ -2,6 +2,8 @@
 
 # Transfer it using this
 # sudo mv ani-cli.sh /usr/local/bin/ani-cli
+# Use like this
+# ani-cli anime_name (to stream) or ani-cli -d anime_name (to download)
 
 readonly USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/121.0"
 readonly API_REFERER="https://allmanga.to"
