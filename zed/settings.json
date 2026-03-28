@@ -36,12 +36,11 @@
     },
     "ui_font_family": "JetBrainsMono Nerd Font Mono",
     "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-    "buffer_font_size": 18,
     "tab_size": 4,
     "format_on_save": "on",
     "autosave": {
         "after_delay": {
-            "milliseconds": 10,
+            "milliseconds": 100,
         },
     },
     "auto_update": false,
