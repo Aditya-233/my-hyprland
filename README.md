@@ -35,7 +35,7 @@ A consistent **Catppuccin Mocha / OLED palette** is applied across the system:
 
 **Zed** editor with:
 
-* Custom OLED theme
+* Mocha theme
 * Built‑in Code Runner
 * Ready for C++, Python, and JavaScript
 
@@ -50,55 +50,53 @@ Automatic power‑profile switching depending on whether the device is **chargin
 Install required packages using **pacman** and **yay** (for AUR packages).
 
 ```bash
-ani-cli-git
-base
-base-devel
-bash-completion
-bluetui
-bluez
-bluez-utils
-brightnessctl
-cliphist
-dhcpcd
-efibootmgr
-fastfetch
-foot
-git
-grim
-gst-plugin-pipewire
-helium-browser-bin
-hyprland
-impala
-imv
-intel-media-driver
-intel-ucode
-iwd
-libpulse
-linux
-linux-firmware
-mako
-mpv
-nano
-ncdu
-pipewire
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-power-profiles-daemon
-python-gobject
-rofi
-slurp
-sof-firmware
-sudo
-swaybg
-thunar
-ttf-jetbrains-mono-nerd
-wireplumber
-wpa_supplicant
-xdg-utils
-yay-bin
-zed
-zram-generator
+base 3-3
+base-devel 1-2
+bash-completion 2.17.0-3
+bluetui 0.8.1-2
+bluez 5.86-4
+bluez-utils 5.86-4
+brightnessctl 0.5.1-3
+cliphist 1:0.7.0-2
+dhcpcd 10.3.1-1
+efibootmgr 18-3
+foot 1.26.1-1
+fzf 0.70.0-1
+git 2.53.0-1
+grim 1.5.0-2
+helium-browser-bin 0.10.7.1-1
+hyprland 0.54.3-1
+impala 0.7.4-1
+imv 5.0.1-1
+intel-media-driver 25.4.6-1
+intel-ucode 20260227-1
+iwd 3.12-1
+linux 6.19.9.arch1-1
+linux-firmware 20260309-1
+mako 1.10.0-1
+mpv 1:0.41.0-3
+nano 8.7.1-1
+pipewire 1:1.6.2-1
+pipewire-alsa 1:1.6.2-1
+pipewire-audio 1:1.6.2-1
+pipewire-jack 1:1.6.2-1
+pipewire-pulse 1:1.6.2-1
+power-profiles-daemon 0.30-1
+rofi 2.0.0-1
+slurp 1.5.0-1
+sof-firmware 2025.12.2-1
+sudo 1.9.17.p2-2
+swaybg 1.2.2-1
+thunar 4.20.7-1
+ttf-jetbrains-mono-nerd 3.4.0-2
+ttf-liberation 2.1.5-2
+wireplumber 0.5.13-2
+wl-clipboard 1:2.3.0-1
+wpa_supplicant 2:2.11-5
+xdg-utils 1.2.1-2
+yay-bin 12.5.7-1
+zed 0.229.0-1
+zram-generator 1.2.1-1
 ```
 
 ---
