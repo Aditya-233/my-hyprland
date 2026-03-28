@@ -1,7 +1,7 @@
 [
     {
         "label": "Code Runner",
-        "command": "file=\"$ZED_FILENAME\"; base=\"${file%.*}\"; ext=\"${file##*.}\"; case \"$ext\" in cpp) clear && g++ -std=c++23 -O2 -static -DONLINE_JUDGE -Wall -Wextra -Wconversion \"$file\" -o \"$base\" -lstdc++exp && time \"./$base\" ;; py) clear && python3 -u \"$file\" ;; js) clear && node \"$file\" ;; *) echo \"Unsupported file type: $ext\" ;; esac",
+        "command": "file=\"$ZED_FILENAME\"; base=\"${file%.*}\"; ext=\"${file##*.}\"; case \"$ext\" in cpp) clear && g++ -Wall -Wextra -Wconversion -static -DONLINE_JUDGE -O2 -std=c++23 -lstdc++exp \"$file\" -o \"$base\" && time \"./$base\" ;; py) clear && python3 -u \"$file\" ;; js) clear && node \"$file\" ;; *) echo \"Unsupported file type: $ext\" ;; esac",
         "cwd": "$ZED_DIRNAME",
         "use_new_terminal": false,
         "allow_concurrent_runs": false,
